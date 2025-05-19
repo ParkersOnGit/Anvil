@@ -19,7 +19,7 @@ namespace Anvil
         {
             InitializeComponent();
             // set up version number (Major.Minor.Patch.Build)
-            VersionNum.Text = "v0.4.2.0";
+            VersionNum.Text = "v0.7.0.0";
             SetUpComboBoxs();
             SetUpToolTips();
             GenerateJSON();
@@ -103,7 +103,7 @@ namespace Anvil
             SlotComboBox.SelectedIndex = 0;
         }
 
-        private void GenerateJSON() // First of all before this code is viewed... I'd like to say sorry!
+        private void GenerateJSON() // First of all before this code is viewed... I'd like to say sorry! (But It works so i guess it dont matter!!)
         {
             /// <summary>
             /// This is the code that generates the json string for the item. It is the main function and gets called on multiple times each time a new variable is changed--or at least it should.
@@ -270,34 +270,23 @@ namespace Anvil
             if (HunterGrass.Checked)
                 jsonString += "\r\n                {\r\n                  \"text\": \"🔥Full Set Bonus: \",\r\n                  \"extra\": [\r\n                    {\r\n                      \"text\": \"Hunter Grass\",\r\n                      \"color\": \"yellow\"\r\n                    }\r\n                  ],\r\n                  \"color\": \"gold\",\r\n                  \"italic\": false\r\n                },\r\n                {\r\n                  \"text\": \"● Gain speed only when touching\",\r\n                  \"color\": \"gray\",\r\n                  \"italic\": false\r\n                },\r\n                {\r\n                  \"text\": \"   grass.... Scary!\",\r\n                  \"color\": \"gray\",\r\n                  \"italic\": false\r\n                },\r\n                \"\",";
 
-
-
-
-
             // finish it off and also have final rarity at bottom
             jsonString += "\r\n                {\r\n                  \"text\": \"" + RarityComboBox.SelectedItem + "\",\r\n                  \"color\": \"" + rareColor + "\",\r\n                  \"bold\": true,\r\n                  \"italic\": false\r\n                }\r\n              ],\r\n              \"mode\": \"insert\"\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_components\",\r\n              \"components\": {\r\n                \"minecraft:attribute_modifiers\": [\r\n                  {\r\n                    \"type\": \"minecraft:movement_speed\",\r\n                    \"id\": \"minecraft:\",\r\n                    \"amount\": " + SpeedNumBox.Value / 100 + ",\r\n                    \"operation\": \"add_value\"\r\n                  },\r\n                  {\r\n                    \"type\": \"minecraft:attack_damage\",\r\n                    \"id\": \"minecraft:\",\r\n                    \"amount\": " + DamageNumBox.Value + ",\r\n                    \"operation\": \"add_value\",\r\n                    \"slot\": \"mainhand\"\r\n                  },\r\n                  {\r\n                    \"type\": \"minecraft:attack_speed\",\r\n                    \"id\": \"minecraft:\",\r\n                    \"amount\": " + AttackSpeedNumBox.Value + ",\r\n                    \"operation\": \"add_value\",\r\n                    \"slot\": \"mainhand\"\r\n                  }\r\n                ]\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:toggle_tooltips\",\r\n              \"toggles\": {\r\n                \"minecraft:attribute_modifiers\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_custom_data\",\r\n              \"tag\": {\r\n                \"Health\": " + HealthNumBox.Value + ",\r\n                \"Health Regen\": " + HealthRegenNumBox.Value + ",\r\n                \"Defense\": " + DefenseNumBox.Value + ",\r\n                \"Mana\": " + ManaNumBox.Value + ",\r\n                \"Mana Regen\": " + ManaRegen.Value + ",\r\n                \"Luck\": " + LuckNumBox.Value + ",\r\n                \"Wisdom\": " + WisdomNumBox.Value + ",\r\n                \"Ability\": " + rightClickEffect + "\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_components\",\r\n              \"components\": {\r\n                \"minecraft:item_model\": \"dungeon:custom_item/" + NameTextBox.Text.Replace(" ", "_").ToLower() + "\",";
 
-
+            // if armor
             if (armorItems.Contains(ItemComboBox.SelectedItem))
                 jsonString += "\r\n                \"minecraft:equippable\": {\r\n                  \"slot\": \"" + armorPiece[ItemComboBox.SelectedItem.ToString().Split('_')[1]] + "\",\r\n                  \"model\": \"dungeon:" + NameTextBox.Text.Replace(" ", "_").ToLower() + "\"\r\n                },\r\n                ";
+
+            // if pumpkin
+            if (ItemComboBox.SelectedItem == "carved_pumpkin")
+                jsonString += "\r\n                \"minecraft:equippable\": {\r\n                  \"slot\": \"" + SlotComboBox.SelectedItem + "\",\r\n                  \"model\": \"dungeon:" + NameTextBox.Text.Replace(" ", "_").ToLower() + "\"\r\n                },\r\n                ";
 
             jsonString += "\r\n                \"minecraft:enchantments\": {\r\n                  \"levels\": {\r\n                    \"ability:" + leftClickEffect + "\": 1\r\n                  },\r\n                  \"show_in_tooltip\": false\r\n                },\r\n                \"minecraft:enchantment_glint_override\": false,\r\n                \"minecraft:unbreakable\": {\r\n                  \"show_in_tooltip\": false\r\n                }";
 
             if (RightInputPanel.Controls.OfType<CheckBox>().Any(cb => cb.Checked))
                 jsonString += ",\r\n                \"minecraft:food\": {\r\n                  \"nutrition\": 0,\r\n                  \"saturation\": 0,\r\n                  \"can_always_eat\": true\r\n                },\r\n                \"minecraft:consumable\": {\r\n                  \"consume_seconds\": 9999\r\n                }";
 
-
             jsonString += "\r\n              },\r\n              \"conditions\": []\r\n            }\r\n          ],\r\n          \"conditions\": []\r\n        }\r\n      ],\r\n      \"functions\": [],\r\n      \"conditions\": []\r\n    }\r\n  ]\r\n}";
-
-
-
-
-
-
-
-
-
-
 
             // set json text box to json string
             JsonTextBox.Text = jsonString;

@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             Anvil = new PictureBox();
             InputGroupBox = new GroupBox();
-            FullSetBonusGroupBox = new GroupBox();
-            FullSetBonusPanel = new Panel();
-            SlotGroupBox = new GroupBox();
-            SlotComboBox = new ComboBox();
-            HunterGrass = new CheckBox();
-            Icon15 = new Label();
             ItemGroupBox = new GroupBox();
             ItemComboBox = new ComboBox();
             DescriptionGroupBox = new GroupBox();
@@ -79,16 +73,6 @@
             NameTextBox = new TextBox();
             RarityGroupBox = new GroupBox();
             RarityComboBox = new ComboBox();
-            RightInputGroupBox = new GroupBox();
-            RightInputPanel = new Panel();
-            PumpkinBlast = new CheckBox();
-            Rage = new CheckBox();
-            HeartAttack = new CheckBox();
-            Gassy = new CheckBox();
-            ManaWard = new CheckBox();
-            MultiHit = new CheckBox();
-            FiraBawl = new CheckBox();
-            Icon14 = new Label();
             LeftInputGroupBox = new GroupBox();
             LeftInputPanel = new Panel();
             ElectricBoogaloo = new CheckBox();
@@ -99,6 +83,22 @@
             Stunning = new CheckBox();
             FlameSacrifice = new CheckBox();
             Icon13 = new Label();
+            FullSetBonusGroupBox = new GroupBox();
+            FullSetBonusPanel = new Panel();
+            SlotGroupBox = new GroupBox();
+            SlotComboBox = new ComboBox();
+            HunterGrass = new CheckBox();
+            Icon15 = new Label();
+            RightInputGroupBox = new GroupBox();
+            RightInputPanel = new Panel();
+            PumpkinBlast = new CheckBox();
+            Rage = new CheckBox();
+            HeartAttack = new CheckBox();
+            Gassy = new CheckBox();
+            ManaWard = new CheckBox();
+            MultiHit = new CheckBox();
+            FiraBawl = new CheckBox();
+            Icon14 = new Label();
             ExportGroupBox = new GroupBox();
             FilePathTextBox = new TextBox();
             SeperationBar = new Panel();
@@ -111,9 +111,6 @@
             VersionNum = new Label();
             ((System.ComponentModel.ISupportInitialize)Anvil).BeginInit();
             InputGroupBox.SuspendLayout();
-            FullSetBonusGroupBox.SuspendLayout();
-            FullSetBonusPanel.SuspendLayout();
-            SlotGroupBox.SuspendLayout();
             ItemGroupBox.SuspendLayout();
             DescriptionGroupBox.SuspendLayout();
             StatsGroupBox.SuspendLayout();
@@ -129,10 +126,13 @@
             ((System.ComponentModel.ISupportInitialize)DamageNumBox).BeginInit();
             NameGroupBox.SuspendLayout();
             RarityGroupBox.SuspendLayout();
-            RightInputGroupBox.SuspendLayout();
-            RightInputPanel.SuspendLayout();
             LeftInputGroupBox.SuspendLayout();
             LeftInputPanel.SuspendLayout();
+            FullSetBonusGroupBox.SuspendLayout();
+            FullSetBonusPanel.SuspendLayout();
+            SlotGroupBox.SuspendLayout();
+            RightInputGroupBox.SuspendLayout();
+            RightInputPanel.SuspendLayout();
             ExportGroupBox.SuspendLayout();
             InfoGroupBox.SuspendLayout();
             SuspendLayout();
@@ -155,85 +155,15 @@
             InputGroupBox.Controls.Add(StatsGroupBox);
             InputGroupBox.Controls.Add(NameGroupBox);
             InputGroupBox.Controls.Add(RarityGroupBox);
-            InputGroupBox.Controls.Add(RightInputGroupBox);
             InputGroupBox.Controls.Add(LeftInputGroupBox);
             InputGroupBox.Controls.Add(FullSetBonusGroupBox);
+            InputGroupBox.Controls.Add(RightInputGroupBox);
             InputGroupBox.Location = new Point(12, 12);
             InputGroupBox.Name = "InputGroupBox";
             InputGroupBox.Size = new Size(537, 651);
             InputGroupBox.TabIndex = 1;
             InputGroupBox.TabStop = false;
             InputGroupBox.Text = "Inputs:";
-            // 
-            // FullSetBonusGroupBox
-            // 
-            FullSetBonusGroupBox.Controls.Add(FullSetBonusPanel);
-            FullSetBonusGroupBox.Controls.Add(Icon15);
-            FullSetBonusGroupBox.Location = new Point(294, 89);
-            FullSetBonusGroupBox.Name = "FullSetBonusGroupBox";
-            FullSetBonusGroupBox.Size = new Size(237, 556);
-            FullSetBonusGroupBox.TabIndex = 36;
-            FullSetBonusGroupBox.TabStop = false;
-            FullSetBonusGroupBox.Text = "     Full Set Bonus:";
-            FullSetBonusGroupBox.Visible = false;
-            // 
-            // FullSetBonusPanel
-            // 
-            FullSetBonusPanel.AutoScroll = true;
-            FullSetBonusPanel.Controls.Add(SlotGroupBox);
-            FullSetBonusPanel.Controls.Add(HunterGrass);
-            FullSetBonusPanel.Dock = DockStyle.Fill;
-            FullSetBonusPanel.Location = new Point(3, 19);
-            FullSetBonusPanel.Name = "FullSetBonusPanel";
-            FullSetBonusPanel.Size = new Size(231, 534);
-            FullSetBonusPanel.TabIndex = 35;
-            // 
-            // SlotGroupBox
-            // 
-            SlotGroupBox.Controls.Add(SlotComboBox);
-            SlotGroupBox.Location = new Point(3, 477);
-            SlotGroupBox.Name = "SlotGroupBox";
-            SlotGroupBox.Size = new Size(225, 54);
-            SlotGroupBox.TabIndex = 37;
-            SlotGroupBox.TabStop = false;
-            SlotGroupBox.Text = "Slot:";
-            // 
-            // SlotComboBox
-            // 
-            SlotComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            SlotComboBox.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SlotComboBox.FormattingEnabled = true;
-            SlotComboBox.Items.AddRange(new object[] { "head", "chest", "legs", "feet" });
-            SlotComboBox.Location = new Point(6, 20);
-            SlotComboBox.Name = "SlotComboBox";
-            SlotComboBox.Size = new Size(213, 24);
-            SlotComboBox.TabIndex = 1;
-            // 
-            // HunterGrass
-            // 
-            HunterGrass.AutoSize = true;
-            HunterGrass.BackColor = Color.Transparent;
-            HunterGrass.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            HunterGrass.ForeColor = SystemColors.ActiveCaptionText;
-            HunterGrass.Location = new Point(3, 4);
-            HunterGrass.Name = "HunterGrass";
-            HunterGrass.Size = new Size(148, 29);
-            HunterGrass.TabIndex = 33;
-            HunterGrass.Text = "Hunter Grass";
-            HunterGrass.UseVisualStyleBackColor = false;
-            HunterGrass.CheckedChanged += AbilityChecks;
-            // 
-            // Icon15
-            // 
-            Icon15.AutoSize = true;
-            Icon15.BackColor = Color.Transparent;
-            Icon15.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Icon15.ForeColor = Color.Goldenrod;
-            Icon15.Location = new Point(0, -3);
-            Icon15.Name = "Icon15";
-            Icon15.Size = new Size(33, 24);
-            Icon15.TabIndex = 33;
-            Icon15.Text = "🔥";
             // 
             // ItemGroupBox
             // 
@@ -728,143 +658,6 @@
             RarityComboBox.TabIndex = 0;
             RarityComboBox.SelectedIndexChanged += RarityComboBoxChanged;
             // 
-            // RightInputGroupBox
-            // 
-            RightInputGroupBox.Controls.Add(RightInputPanel);
-            RightInputGroupBox.Controls.Add(Icon14);
-            RightInputGroupBox.Location = new Point(294, 361);
-            RightInputGroupBox.Name = "RightInputGroupBox";
-            RightInputGroupBox.Size = new Size(237, 284);
-            RightInputGroupBox.TabIndex = 6;
-            RightInputGroupBox.TabStop = false;
-            RightInputGroupBox.Text = "      Right Input:";
-            // 
-            // RightInputPanel
-            // 
-            RightInputPanel.AutoScroll = true;
-            RightInputPanel.Controls.Add(PumpkinBlast);
-            RightInputPanel.Controls.Add(Rage);
-            RightInputPanel.Controls.Add(HeartAttack);
-            RightInputPanel.Controls.Add(Gassy);
-            RightInputPanel.Controls.Add(ManaWard);
-            RightInputPanel.Controls.Add(MultiHit);
-            RightInputPanel.Controls.Add(FiraBawl);
-            RightInputPanel.Dock = DockStyle.Fill;
-            RightInputPanel.Location = new Point(3, 19);
-            RightInputPanel.Name = "RightInputPanel";
-            RightInputPanel.Size = new Size(231, 262);
-            RightInputPanel.TabIndex = 41;
-            // 
-            // PumpkinBlast
-            // 
-            PumpkinBlast.AutoSize = true;
-            PumpkinBlast.BackColor = Color.Transparent;
-            PumpkinBlast.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            PumpkinBlast.ForeColor = SystemColors.ActiveCaptionText;
-            PumpkinBlast.Location = new Point(3, 157);
-            PumpkinBlast.Name = "PumpkinBlast";
-            PumpkinBlast.Size = new Size(159, 29);
-            PumpkinBlast.TabIndex = 47;
-            PumpkinBlast.Text = "Pumpkin Blast";
-            PumpkinBlast.UseVisualStyleBackColor = false;
-            PumpkinBlast.CheckedChanged += AbilityChecks;
-            // 
-            // Rage
-            // 
-            Rage.AutoSize = true;
-            Rage.BackColor = Color.Transparent;
-            Rage.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Rage.ForeColor = SystemColors.ActiveCaptionText;
-            Rage.Location = new Point(3, 3);
-            Rage.Name = "Rage";
-            Rage.Size = new Size(75, 29);
-            Rage.TabIndex = 41;
-            Rage.Text = "Rage";
-            Rage.UseVisualStyleBackColor = false;
-            Rage.CheckedChanged += AbilityChecks;
-            // 
-            // HeartAttack
-            // 
-            HeartAttack.AutoSize = true;
-            HeartAttack.BackColor = Color.Transparent;
-            HeartAttack.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            HeartAttack.ForeColor = SystemColors.ActiveCaptionText;
-            HeartAttack.Location = new Point(3, 130);
-            HeartAttack.Name = "HeartAttack";
-            HeartAttack.Size = new Size(144, 29);
-            HeartAttack.TabIndex = 45;
-            HeartAttack.Text = "Heart Attack";
-            HeartAttack.UseVisualStyleBackColor = false;
-            HeartAttack.CheckedChanged += AbilityChecks;
-            // 
-            // Gassy
-            // 
-            Gassy.AutoSize = true;
-            Gassy.BackColor = Color.Transparent;
-            Gassy.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Gassy.ForeColor = SystemColors.ActiveCaptionText;
-            Gassy.Location = new Point(3, 54);
-            Gassy.Name = "Gassy";
-            Gassy.Size = new Size(81, 29);
-            Gassy.TabIndex = 43;
-            Gassy.Text = "Gassy";
-            Gassy.UseVisualStyleBackColor = false;
-            Gassy.CheckedChanged += AbilityChecks;
-            // 
-            // ManaWard
-            // 
-            ManaWard.AutoSize = true;
-            ManaWard.BackColor = Color.Transparent;
-            ManaWard.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ManaWard.ForeColor = SystemColors.ActiveCaptionText;
-            ManaWard.Location = new Point(3, 29);
-            ManaWard.Name = "ManaWard";
-            ManaWard.Size = new Size(134, 29);
-            ManaWard.TabIndex = 42;
-            ManaWard.Text = "Mana Ward";
-            ManaWard.UseVisualStyleBackColor = false;
-            ManaWard.CheckedChanged += AbilityChecks;
-            // 
-            // MultiHit
-            // 
-            MultiHit.AutoSize = true;
-            MultiHit.BackColor = Color.Transparent;
-            MultiHit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MultiHit.ForeColor = SystemColors.ActiveCaptionText;
-            MultiHit.Location = new Point(3, 79);
-            MultiHit.Name = "MultiHit";
-            MultiHit.Size = new Size(109, 29);
-            MultiHit.TabIndex = 44;
-            MultiHit.Text = "Multi-hit";
-            MultiHit.UseVisualStyleBackColor = false;
-            MultiHit.CheckedChanged += AbilityChecks;
-            // 
-            // FiraBawl
-            // 
-            FiraBawl.AutoSize = true;
-            FiraBawl.BackColor = Color.Transparent;
-            FiraBawl.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            FiraBawl.ForeColor = Color.LightCoral;
-            FiraBawl.Location = new Point(3, 104);
-            FiraBawl.Name = "FiraBawl";
-            FiraBawl.Size = new Size(143, 29);
-            FiraBawl.TabIndex = 46;
-            FiraBawl.Text = "~FIRA BAWL";
-            FiraBawl.UseVisualStyleBackColor = false;
-            FiraBawl.CheckedChanged += AbilityChecks;
-            // 
-            // Icon14
-            // 
-            Icon14.AutoSize = true;
-            Icon14.BackColor = Color.Transparent;
-            Icon14.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Icon14.ForeColor = Color.Goldenrod;
-            Icon14.Location = new Point(1, -3);
-            Icon14.Name = "Icon14";
-            Icon14.Size = new Size(33, 24);
-            Icon14.TabIndex = 34;
-            Icon14.Text = "🔥";
-            // 
             // LeftInputGroupBox
             // 
             LeftInputGroupBox.Controls.Add(LeftInputPanel);
@@ -1002,6 +795,214 @@
             Icon13.TabIndex = 33;
             Icon13.Text = "🔥";
             // 
+            // FullSetBonusGroupBox
+            // 
+            FullSetBonusGroupBox.Controls.Add(FullSetBonusPanel);
+            FullSetBonusGroupBox.Controls.Add(Icon15);
+            FullSetBonusGroupBox.Location = new Point(294, 89);
+            FullSetBonusGroupBox.Name = "FullSetBonusGroupBox";
+            FullSetBonusGroupBox.Size = new Size(237, 556);
+            FullSetBonusGroupBox.TabIndex = 36;
+            FullSetBonusGroupBox.TabStop = false;
+            FullSetBonusGroupBox.Text = "     Full Set Bonus:";
+            FullSetBonusGroupBox.Visible = false;
+            // 
+            // FullSetBonusPanel
+            // 
+            FullSetBonusPanel.AutoScroll = true;
+            FullSetBonusPanel.Controls.Add(SlotGroupBox);
+            FullSetBonusPanel.Controls.Add(HunterGrass);
+            FullSetBonusPanel.Dock = DockStyle.Fill;
+            FullSetBonusPanel.Location = new Point(3, 19);
+            FullSetBonusPanel.Name = "FullSetBonusPanel";
+            FullSetBonusPanel.Size = new Size(231, 534);
+            FullSetBonusPanel.TabIndex = 35;
+            // 
+            // SlotGroupBox
+            // 
+            SlotGroupBox.Controls.Add(SlotComboBox);
+            SlotGroupBox.Location = new Point(3, 477);
+            SlotGroupBox.Name = "SlotGroupBox";
+            SlotGroupBox.Size = new Size(225, 54);
+            SlotGroupBox.TabIndex = 37;
+            SlotGroupBox.TabStop = false;
+            SlotGroupBox.Text = "Slot:";
+            // 
+            // SlotComboBox
+            // 
+            SlotComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            SlotComboBox.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SlotComboBox.FormattingEnabled = true;
+            SlotComboBox.Items.AddRange(new object[] { "head", "chest", "legs", "feet" });
+            SlotComboBox.Location = new Point(6, 20);
+            SlotComboBox.Name = "SlotComboBox";
+            SlotComboBox.Size = new Size(213, 24);
+            SlotComboBox.TabIndex = 1;
+            SlotComboBox.SelectedIndexChanged += RarityComboBoxChanged;
+            // 
+            // HunterGrass
+            // 
+            HunterGrass.AutoSize = true;
+            HunterGrass.BackColor = Color.Transparent;
+            HunterGrass.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            HunterGrass.ForeColor = SystemColors.ActiveCaptionText;
+            HunterGrass.Location = new Point(3, 4);
+            HunterGrass.Name = "HunterGrass";
+            HunterGrass.Size = new Size(148, 29);
+            HunterGrass.TabIndex = 33;
+            HunterGrass.Text = "Hunter Grass";
+            HunterGrass.UseVisualStyleBackColor = false;
+            HunterGrass.CheckedChanged += AbilityChecks;
+            // 
+            // Icon15
+            // 
+            Icon15.AutoSize = true;
+            Icon15.BackColor = Color.Transparent;
+            Icon15.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Icon15.ForeColor = Color.Goldenrod;
+            Icon15.Location = new Point(0, -3);
+            Icon15.Name = "Icon15";
+            Icon15.Size = new Size(33, 24);
+            Icon15.TabIndex = 33;
+            Icon15.Text = "🔥";
+            // 
+            // RightInputGroupBox
+            // 
+            RightInputGroupBox.Controls.Add(RightInputPanel);
+            RightInputGroupBox.Controls.Add(Icon14);
+            RightInputGroupBox.Location = new Point(294, 361);
+            RightInputGroupBox.Name = "RightInputGroupBox";
+            RightInputGroupBox.Size = new Size(237, 284);
+            RightInputGroupBox.TabIndex = 6;
+            RightInputGroupBox.TabStop = false;
+            RightInputGroupBox.Text = "      Right Input:";
+            // 
+            // RightInputPanel
+            // 
+            RightInputPanel.AutoScroll = true;
+            RightInputPanel.Controls.Add(PumpkinBlast);
+            RightInputPanel.Controls.Add(Rage);
+            RightInputPanel.Controls.Add(HeartAttack);
+            RightInputPanel.Controls.Add(Gassy);
+            RightInputPanel.Controls.Add(ManaWard);
+            RightInputPanel.Controls.Add(MultiHit);
+            RightInputPanel.Controls.Add(FiraBawl);
+            RightInputPanel.Dock = DockStyle.Fill;
+            RightInputPanel.Location = new Point(3, 19);
+            RightInputPanel.Name = "RightInputPanel";
+            RightInputPanel.Size = new Size(231, 262);
+            RightInputPanel.TabIndex = 41;
+            // 
+            // PumpkinBlast
+            // 
+            PumpkinBlast.AutoSize = true;
+            PumpkinBlast.BackColor = Color.Transparent;
+            PumpkinBlast.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PumpkinBlast.ForeColor = SystemColors.ActiveCaptionText;
+            PumpkinBlast.Location = new Point(3, 157);
+            PumpkinBlast.Name = "PumpkinBlast";
+            PumpkinBlast.Size = new Size(159, 29);
+            PumpkinBlast.TabIndex = 47;
+            PumpkinBlast.Text = "Pumpkin Blast";
+            PumpkinBlast.UseVisualStyleBackColor = false;
+            PumpkinBlast.CheckedChanged += AbilityChecks;
+            // 
+            // Rage
+            // 
+            Rage.AutoSize = true;
+            Rage.BackColor = Color.Transparent;
+            Rage.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Rage.ForeColor = SystemColors.ActiveCaptionText;
+            Rage.Location = new Point(3, 3);
+            Rage.Name = "Rage";
+            Rage.Size = new Size(75, 29);
+            Rage.TabIndex = 41;
+            Rage.Text = "Rage";
+            Rage.UseVisualStyleBackColor = false;
+            Rage.CheckedChanged += AbilityChecks;
+            // 
+            // HeartAttack
+            // 
+            HeartAttack.AutoSize = true;
+            HeartAttack.BackColor = Color.Transparent;
+            HeartAttack.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            HeartAttack.ForeColor = SystemColors.ActiveCaptionText;
+            HeartAttack.Location = new Point(3, 130);
+            HeartAttack.Name = "HeartAttack";
+            HeartAttack.Size = new Size(144, 29);
+            HeartAttack.TabIndex = 45;
+            HeartAttack.Text = "Heart Attack";
+            HeartAttack.UseVisualStyleBackColor = false;
+            HeartAttack.CheckedChanged += AbilityChecks;
+            // 
+            // Gassy
+            // 
+            Gassy.AutoSize = true;
+            Gassy.BackColor = Color.Transparent;
+            Gassy.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Gassy.ForeColor = SystemColors.ActiveCaptionText;
+            Gassy.Location = new Point(3, 54);
+            Gassy.Name = "Gassy";
+            Gassy.Size = new Size(81, 29);
+            Gassy.TabIndex = 43;
+            Gassy.Text = "Gassy";
+            Gassy.UseVisualStyleBackColor = false;
+            Gassy.CheckedChanged += AbilityChecks;
+            // 
+            // ManaWard
+            // 
+            ManaWard.AutoSize = true;
+            ManaWard.BackColor = Color.Transparent;
+            ManaWard.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ManaWard.ForeColor = SystemColors.ActiveCaptionText;
+            ManaWard.Location = new Point(3, 29);
+            ManaWard.Name = "ManaWard";
+            ManaWard.Size = new Size(134, 29);
+            ManaWard.TabIndex = 42;
+            ManaWard.Text = "Mana Ward";
+            ManaWard.UseVisualStyleBackColor = false;
+            ManaWard.CheckedChanged += AbilityChecks;
+            // 
+            // MultiHit
+            // 
+            MultiHit.AutoSize = true;
+            MultiHit.BackColor = Color.Transparent;
+            MultiHit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MultiHit.ForeColor = SystemColors.ActiveCaptionText;
+            MultiHit.Location = new Point(3, 79);
+            MultiHit.Name = "MultiHit";
+            MultiHit.Size = new Size(109, 29);
+            MultiHit.TabIndex = 44;
+            MultiHit.Text = "Multi-hit";
+            MultiHit.UseVisualStyleBackColor = false;
+            MultiHit.CheckedChanged += AbilityChecks;
+            // 
+            // FiraBawl
+            // 
+            FiraBawl.AutoSize = true;
+            FiraBawl.BackColor = Color.Transparent;
+            FiraBawl.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FiraBawl.ForeColor = Color.LightCoral;
+            FiraBawl.Location = new Point(3, 104);
+            FiraBawl.Name = "FiraBawl";
+            FiraBawl.Size = new Size(143, 29);
+            FiraBawl.TabIndex = 46;
+            FiraBawl.Text = "~FIRA BAWL";
+            FiraBawl.UseVisualStyleBackColor = false;
+            FiraBawl.CheckedChanged += AbilityChecks;
+            // 
+            // Icon14
+            // 
+            Icon14.AutoSize = true;
+            Icon14.BackColor = Color.Transparent;
+            Icon14.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Icon14.ForeColor = Color.Goldenrod;
+            Icon14.Location = new Point(1, -3);
+            Icon14.Name = "Icon14";
+            Icon14.Size = new Size(33, 24);
+            Icon14.TabIndex = 34;
+            Icon14.Text = "🔥";
+            // 
             // ExportGroupBox
             // 
             ExportGroupBox.Controls.Add(FilePathTextBox);
@@ -1127,11 +1128,6 @@
             Text = "Anvil | Custom Item Gen";
             ((System.ComponentModel.ISupportInitialize)Anvil).EndInit();
             InputGroupBox.ResumeLayout(false);
-            FullSetBonusGroupBox.ResumeLayout(false);
-            FullSetBonusGroupBox.PerformLayout();
-            FullSetBonusPanel.ResumeLayout(false);
-            FullSetBonusPanel.PerformLayout();
-            SlotGroupBox.ResumeLayout(false);
             ItemGroupBox.ResumeLayout(false);
             DescriptionGroupBox.ResumeLayout(false);
             DescriptionGroupBox.PerformLayout();
@@ -1150,14 +1146,19 @@
             NameGroupBox.ResumeLayout(false);
             NameGroupBox.PerformLayout();
             RarityGroupBox.ResumeLayout(false);
-            RightInputGroupBox.ResumeLayout(false);
-            RightInputGroupBox.PerformLayout();
-            RightInputPanel.ResumeLayout(false);
-            RightInputPanel.PerformLayout();
             LeftInputGroupBox.ResumeLayout(false);
             LeftInputGroupBox.PerformLayout();
             LeftInputPanel.ResumeLayout(false);
             LeftInputPanel.PerformLayout();
+            FullSetBonusGroupBox.ResumeLayout(false);
+            FullSetBonusGroupBox.PerformLayout();
+            FullSetBonusPanel.ResumeLayout(false);
+            FullSetBonusPanel.PerformLayout();
+            SlotGroupBox.ResumeLayout(false);
+            RightInputGroupBox.ResumeLayout(false);
+            RightInputGroupBox.PerformLayout();
+            RightInputPanel.ResumeLayout(false);
+            RightInputPanel.PerformLayout();
             ExportGroupBox.ResumeLayout(false);
             ExportGroupBox.PerformLayout();
             InfoGroupBox.ResumeLayout(false);
