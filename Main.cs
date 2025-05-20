@@ -19,7 +19,7 @@ namespace Anvil
         {
             InitializeComponent();
             // set up version number (Major.Minor.Patch.Build)
-            VersionNum.Text = "v0.7.0.0";
+            VersionNum.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             SetUpComboBoxs();
             SetUpToolTips();
             GenerateJSON();
@@ -57,6 +57,7 @@ namespace Anvil
             tt.SetToolTip(PumpkinBlast, "● Shoot a pumpkin dealing 5 damage in 6 blocks");
 
             // set up full set bonus
+            tt.SetToolTip(HunterGrass, "● Gain speed only when touching grass.... Scary!");
 
             // version number
             tt.SetToolTip(VersionNum, "Major.Minor.Patch.Build");

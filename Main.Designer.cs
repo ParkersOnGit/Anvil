@@ -155,9 +155,9 @@
             InputGroupBox.Controls.Add(StatsGroupBox);
             InputGroupBox.Controls.Add(NameGroupBox);
             InputGroupBox.Controls.Add(RarityGroupBox);
-            InputGroupBox.Controls.Add(LeftInputGroupBox);
             InputGroupBox.Controls.Add(FullSetBonusGroupBox);
             InputGroupBox.Controls.Add(RightInputGroupBox);
+            InputGroupBox.Controls.Add(LeftInputGroupBox);
             InputGroupBox.Location = new Point(12, 12);
             InputGroupBox.Name = "InputGroupBox";
             InputGroupBox.Size = new Size(537, 651);
